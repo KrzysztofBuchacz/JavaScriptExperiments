@@ -1,12 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
-<script src='inehritance.js'></script>
+<script src='shared-functional.js'></script>
     </head>
     <body>
         <script>
-            var stack1 = new BetterStack();
+            var stack1 = BetterStack();
             stack1.push(1);
-            var stack2 = new Stack();
+            var stack2 = Stack();
+            stack2.push(3);
+            stack2.push(4);
             alert(stack1.size() + ' ' + stack2.size());
         </script>
     </body>

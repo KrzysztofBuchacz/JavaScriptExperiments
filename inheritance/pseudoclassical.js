@@ -1,38 +1,34 @@
-var Stack = function() {
-  var someInstance = {};
-  someInstance.counter = 0;
+var Stack = function () {
+  this.counter = 0;
+  this.storage = {};
+};
 
-  // Use an object with numeric keys to store values
-  someInstance.storage = {};
+Stack.prototype.push = function (value) {
+  this.storage[this.counter] = value;
+  this.counter++;
+};
 
-  // Implement the methods below
-  someInstance.push = function (value) {
-    someInstance.storage[someInstance.counter] = value;
-    someInstance.counter++;
-  };
+Stack.prototype.pop = function () {
+  if (this.counter > 0) {
+    this.counter--;
+    var result = this.storage[this.counter];
+    delete this.storage[this.counter];
+    return result;
+  }
+};
 
-  someInstance.pop = function () {
-    if (someInstance.counter > 0) {
-      someInstance.counter--;
-      var result = someInstance.storage[someInstance.counter];
-      delete someInstance.storage[someInstance.counter];
-      return result;
-    }
-  };
-
-  someInstance.size = function () {
-    return someInstance.counter;
-  };
-
-  return someInstance;
+Stack.prototype.size = function () {
+  return this.counter;
 };
 
 var BetterStack = function () {
-  var someInstance = Stack();
+  Stack.call(this);
 
-  someInstance.size = function () {
-    return someInstance.counter;
-  };
+};
 
-  return someInstance;
+BetterStack.prototype = Object.create(Stack.prototype);
+BetterStack.prototype.constructor = BetterStack;
+
+BetterStack.prototype.size = function () {
+  return this.counter;
 }
