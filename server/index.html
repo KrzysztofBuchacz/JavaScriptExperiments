@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="./node_modules/angular/angular.min.js"></script>
 </head>
 
 <body>
@@ -20,6 +21,10 @@
   <div class="alert alert-success">
     <strong>Success!</strong> Indicates a successful or positive action.
   </div>
+
+  <div ng-app="myApp" ng-controller="myData">Angular = {{products}}</div>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>

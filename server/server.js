@@ -41,7 +41,7 @@ http.createServer(function (request, response) {
     }
   });
 })
-  //.listen(8080, '127.0.0.1');
-  .listen(8080, '192.168.0.8');
+  .listen(8080, '127.0.0.1');
+  //.listen(8080, '192.168.0.8');
 
 console.log('Listening...');
