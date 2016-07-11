@@ -7,7 +7,8 @@ var contentTypes = {
   '.css': 'text/css',
   '.html': 'text/html',
   '.js': 'text/javascript',
-  '.jpg': 'image/jpg'
+  '.jpg': 'image/jpg',
+  '.ico': 'image/x-icon'
 }
 
 http.createServer(function (request, response) {

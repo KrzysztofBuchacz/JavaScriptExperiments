@@ -11,6 +11,9 @@ $RECYCLE.BIN/
 # Visual Studio
 .vscode
 
+# babilon output
+server/compiled/
+
 # npm
 server/node_modules/
 
